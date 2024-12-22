@@ -1,14 +1,22 @@
-function MyButton({ title }: { title: string }) {
-  return (
-    <button>{title}</button>
-  );
+export interface AddressProps {
+  state: string;
+  city: string;
+  country: string;
 }
 
-export default function MyApp() {
-  return (
-    <div>
-      <h1>Welcome to my app</h1>
-      <MyButton title="I'm a button" />
-    </div>
-  );
+export interface OffersProps {
+  bed: string;
+  shower: string;
+  occupants: string;
+}
+
+export interface PropertyProps {
+  name: string;
+  address: AddressProps;
+  rating: number;
+  category: string[];
+  price: number;
+  offers: OffersProps;
+  image: string;
+  discount: string;
 }
